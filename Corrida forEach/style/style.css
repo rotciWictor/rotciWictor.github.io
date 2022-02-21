@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(../assets/images/track.jpg);
+    background-repeat: no-repeat;
+    background-color: #0d0d0d;
+    background-size: cover;
+    margin: auto;
+    
+}
+/* .background-image{
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/images/checkered-flag-black-and-white-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    filter: opacity(0.45);
+    height: 120vh;
+    width: 120vh;
+    
+} */
+#juca-car{
+    border-left: black dashed 1px;
+    border-right: black dashed 1px;
+    padding: 0 1em;
+}
+main{
+    background-color: #ffffff88;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 135vh;
+    width: 120vh;
+}
+aside{
+    background-color: #ffffff88;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 80vh;
+}
+td{
+    border: solid black 1px;
+    height: 2em;
+    width: 3em;
+    text-align: center;
+    font-weight: bold;
+}
+div{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+    width: 45em;
+    
+
+}
+div>div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5em;
+
+}
+input{
+    margin:0.5em;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corrida com forEach</title>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+    <div></div>
+    <main>
+        <h1>Corrida</h1>
+        <div>
+            <input type="button" onclick='startStandardRace(quickRace,"quickRace")' value="Corrida rápida" />
+            <input type="button" onclick='startStandardRace(grandPrix,"grandPrix")' value="Grande Prêmio" />
+            <input type="button" onclick='startStandardRace(enduro,"enduro")' value="Enduro" />
+        </div>
+        <div>
+            <div id="edna-car">
+                <h2 id="edna"></h2>
+                <h2 id="edna-rarity"></h2>
+                <h2 id="edna-maxvel"></h2>
+                <h2 id="edna-minvel"></h2>
+                <h2 id="edna-skid"></h2>
+            </div>
+            <div id="juca-car">
+                <h2 id="juca"></h2>
+                <h2 id="juca-rarity"></h2>
+                <h2 id="juca-maxvel"></h2>
+                <h2 id="juca-minvel"></h2>
+                <h2 id="juca-skid"></h2>
+            </div>
+            <div id="pedro-car">
+                <h2 id="pedro"></h2>
+                <h2 id="pedro-rarity"></h2>
+                <h2 id="pedro-maxvel"></h2>
+                <h2 id="pedro-minvel"></h2>
+                <h2 id="pedro-skid"></h2>
+            </div>
+        </div>
+        <h1 id="winner"></h1>
+        <h2 id="winnerlaps"></h2>
+        <h2 id="second"></h2>
+        <h2 id="third"></h2>
+    </main>
+    <aside>
+        <h2>Campeonato</h2>
+        <table>
+            <thead>
+                <th></th>
+                <th>Edna</th>
+                <th>Pedro</th>
+                <th>Juca</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nível</th>
+                    <td id="edna-nivel"></td>
+                    <td id="pedro-nivel"></td>
+                    <td id="juca-nivel"></td>
+                </tr>
+                <tr>
+                    <th>Pontos</th>
+                    <td id="edna-points"></td>
+                    <td id="pedro-points"></td>
+                    <td id="juca-points"></td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+    <!-- <div class="background-image"></div> -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

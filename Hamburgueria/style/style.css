@@ -1,0 +1,36 @@
+header{
+    padding-left: 15em;
+}
+fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vh;
+}
+#b{
+    width: 80vh;
+    margin-top: 3em;
+    color: black;
+    font-weight: bolder;
+    background-color: #f2f2f2;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 80vh;
+    height: 50vh;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

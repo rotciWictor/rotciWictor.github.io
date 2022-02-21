@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    height: 39.2em;
+}
+.headerOne{
+    background-color: rgb(8, 8, 8);
+    height: 100%;
+    flex-grow: 3;
+}
+.headerTwo{
+    background-color: goldenrod;
+    height: 100%;
+    flex-grow: 2;
+}
+#me{
+    height: 30em;
+    width: auto;
+    z-index: 1;
+    position: absolute;
+    right: 17em;
+    bottom: 0;
+
+}   
+#name{
+    color:goldenrod;
+    z-index: 1;
+    position: absolute;
+    left: 8em;
+    top: 7em;
+}
+#age{
+    color: white;
+    z-index: 1;
+    position: absolute;
+    left: 16em;
+    top: 18em;
+}
+#state{
+    color:white;
+    z-index: 1;
+    position: absolute;
+    left: 16em;
+    top: 20em;
+}
+#section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 16, 16);
+}
+#section2{
+    background-color: rgb(8, 8, 8);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+figure, #animeList, li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p,#titleSection2, #titleSection1, #descriptionOne, #descriptionTwo{
+    color: white;
+}
+figure{
+    margin: 1 0 0 0;
+}
+#titleSection1,#titleSection2{
+    border-bottom: goldenrod 2px dashed;
+}
+p{
+    width: 70%;
+    text-align: center;
+    font-size: 1.05em;
+    
+}
+#age, #state{
+    text-align: left;
+}
+.animeName{
+    font-size: 2em;
+    color: goldenrod;
+}

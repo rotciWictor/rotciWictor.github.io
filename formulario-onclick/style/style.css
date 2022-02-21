@@ -1,0 +1,35 @@
+body{
+    background-image: url("../assets/images/library.jpg");
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+main{
+    background-color: #f2f2f2cf;
+    min-height: 90vh;
+}
+#registration, #library-collection, header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#btn-send{
+    background-color: black;
+    color: #f2f2f2;
+}
+th, td{
+    width: 7em;
+    text-align: center;
+    background-color: black;
+    color: #f2f2f2;
+    border: black solid 0.1em;
+}
+td{
+    background-color: #f2f2f2;
+    color: black
+}
+h3{
+    width: 100%;
+    text-align: center;
+   
+}

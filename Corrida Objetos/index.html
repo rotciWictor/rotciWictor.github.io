@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida com Objetos</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Corrida</h1>
+        <div>
+            <input type="button" onclick=startStandardRace(quickRace) value="Corrida rápida">
+            <input type="button" onclick=startStandardRace(grandPrix) value="Grande Prêmio">
+            <input type="button" onclick=startStandardRace(enduro) value="Enduro">
+        </div>
+        <div>
+            <div id="edna-car">
+                <h2 id="edna"></h2>
+                <h2 id="edna-rarity"></h2>
+                <h2 id="edna-maxvel"></h2>
+                <h2 id="edna-minvel"></h2>
+                <h2 id="edna-skid"></h2>
+            </div>
+            <div id="juca-car">
+                <h2 id="juca"></h2>
+                <h2 id="juca-rarity"></h2>
+                <h2 id="juca-maxvel"></h2>
+                <h2 id="juca-minvel"></h2>
+                <h2 id="juca-skid"></h2>
+
+            </div>
+            <div id="pedro-car">
+                <h2 id="pedro"></h2>
+                <h2 id="pedro-rarity"></h2>
+                <h2 id="pedro-maxvel"></h2>
+                <h2 id="pedro-minvel"></h2>
+                <h2 id="pedro-skid"></h2>
+            </div>
+        </div>
+        <h1 id="winner"></h1>
+        <h2 id="winnerlaps"></h2>
+    </main>
+    <!-- <div class="background-image"></div> -->
+    <script src="./assets/script2.js"></script>
+</body>
+
+</html>

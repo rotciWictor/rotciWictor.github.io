@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy of a store page</title>
+    <style>
+        @font-face {
+            font-family: 'Jaguar';
+            src: url("fontes/NFLJAGUA.TTF") format('truetype');
+        }
+         @font-face { 
+            font-family: "Grotesk"; 
+            src: url(fontes/DIN\ Neuzeit\ Grotesk\ LT\ W01\ BdCn.ttf) format(truetype);
+        }
+        @font-face{
+            font-family: "Avenir-Light";
+            src: url(fontes/Avenir\ LT\ 35\ Light.ttf) format(truetype);
+        }   
+        .page{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            height: 4em;
+            width: 75em;
+            margin-top: 0.5em;
+        }
+        .left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4em;
+            width: auto;
+
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4em;
+            width: auto;
+        }
+        .store-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            height:3em;
+            width:6em;
+            margin-left: 0.5em;
+        }
+        .store-name{
+            color:#FFFFFF;
+            font-family:"Jaguar";
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-left: 0.5em;
+            letter-spacing: 0.3em
+        }
+        .store-name:hover{
+            color: #FF6200;
+        }
+        .search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0.5em;
+        }
+        #search:hover{
+            padding: 1em;
+            border-bottom: black 1px solid;
+        }    
+        input{
+            border:none
+        }
+        input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4em;
+            width: auto;
+            font-family: "Avenir-Light";
+        }
+        .menu-buttons{
+            margin: 0 1.2em;
+        }
+        .menu-buttons:hover{
+            color: #FF6200;
+            cursor: pointer;
+        }
+        .login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0.75em;
+            height: 4em;
+            width: auto;
+            cursor: pointer;
+        }
+        .shop-bag{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4em;
+            width: auto;
+            margin: 0 0.75em;
+            cursor: pointer;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 75em;
+            height: 17em;
+        }
+        #box1{
+            background-color: #FF6200;
+        }
+        #box2{
+            background-color: #FFFFFF;
+        }
+        #box3{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #FFFFFF;
+            height: fit-content;
+            margin-bottom: 0;
+        }
+        #box4{
+            flex-direction: row;
+            margin-top: 0;
+        }
+        #box5{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #000000;
+            color: #FFFFFF;
+            margin-top: 10em;
+            font-family: "Avenir-Light";
+            font-weight: bold;
+        }
+        #box6{
+            width: fit-content;
+        }
+        .boxtext{
+            display: flex;
+            flex-direction: column;
+        }
+        .font1{
+            color: #FFFFFF;
+            font-family:"Jaguar";
+            text-align: center;
+            letter-spacing: 0.1rem;
+            font-size: 3.5em;
+            margin-bottom: 0.2em;
+        }
+        .font2{
+            color: #FFFFFF;
+            font-family:"Jaguar";
+            text-align: center;
+            font-size: 1.8em;
+        }
+        .font3{
+            font-family: "Jaguar";
+            text-align: center;
+            font-size: 6em;
+            letter-spacing: 0.25rem;
+            margin-bottom: -1em;
+        }
+        .font4{
+            color: #FF6200;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            height:fit-content;
+            width: 50em;
+            margin-top: 2em;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: "Avenir-Light";
+            font-weight: bold;
+            background-color: #FF6200; 
+            color: #FFFFFF; 
+            border:0.2em solid #FFFFFF;
+            height: 2.5em;
+            width: 14em;
+            text-align: center;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: #FFFFFF;
+            color: #FF6200;
+        }
+        #button1{
+            width: 10em;
+            background-color: #FFFFFF;
+            color: #FF6200;
+            border:0.2em solid #FF6200;
+        }
+        #button1:hover{
+            background-color: #FF6200; 
+            color: #FFFFFF; 
+            border:0.2em solid #FF6200;
+        }
+        #button2{
+            height:2.5em ;
+            width: 2.5em;
+            background-color: #FF6200; 
+            color: #FFFFFF;
+            border:0.2em solid #FF6200;
+            text-align: center;
+            cursor: pointer;
+        }
+        #button3{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FF6200;
+            color: #FFFFFF;
+            border: none;
+            width: 12em;
+            height: 2.5em;
+            text-align: center;
+            cursor: pointer;
+        }
+        .float-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3.5em;
+            width: 12.5em;
+            background-color: #000000;
+            color: #FFFFFF;
+            box-shadow:#FFFFFF 0 0 0.3em;
+            position: fixed;
+            z-index: 997;
+            right: 1em;
+            bottom: 1.5em;
+            cursor: pointer;
+        }
+        .photos{
+            margin-top: 0.75em;
+            margin-right: 0.75em;
+        }
+        .ribbon{
+            height: 0.75em;
+            width: 37em;
+            background-color: #FF6200;
+            margin-bottom: -10.8em;
+        }
+        .hanger{
+            display: flex;
+            height:315px;
+            width: 237px;
+            margin: 0em;
+            padding: 0em;
+            background-color: black;
+        }
+        .hanger:hover .quick-view{ 
+            visibility: visible;
+        }
+        #hanger1{
+            background-image: url('./imagens/Double-meaning-frente.webp');
+        }
+        #hanger1:hover{
+            background-image: url("./imagens/double-meaning.webp");
+        }
+        #hanger2{
+            background-image: url('./imagens/boca\ frente.webp');
+        }
+        #hanger2:hover{
+            background-image: url("./imagens/boca\ verso.webp");
+        }
+        #hanger3{
+            background-image: url('./imagens/verde\ freak\ frente.webp');
+        }
+        #hanger3:hover{
+            background-image: url("./imagens/freak\ hover.webp");
+        }
+        #hanger4{
+            background-image: url('./imagens/mew\ capa.webp');
+        }
+        #hanger4:hover{
+            background-image: url("./imagens/mew\ hover.webp");
+        }
+        #hanger5{
+            background-image: url('./imagens/listras\ verdes\ frente.webp');
+        }
+        #hanger5:hover{
+            background-image: url("./imagens/litras\ verde\ hover.webp");
+        }
+        #hanger6{
+            background-image: url('./imagens/barco\ frente.webp');
+        }
+        #hanger6:hover{
+            background-image: url("./imagens/barco\ hover.webp");
+        }
+        #hanger7{
+            background-image: url('./imagens/preto\ rosa\ e\ branca.webp');
+        }
+        #hanger7:hover{
+            background-image: url("./imagens/preto\ rosa\ e\ branca\ hover.webp");
+        }
+        #hanger8{
+            background-image: url('./imagens/phenomenon.webp');
+        }
+        #hanger8:hover{
+            background-image: url("./imagens/phenomenom\ hover.webp");
+        }
+        #hanger9{
+            background-image: url('./imagens/visionary\ frente.webp');
+        }
+        #hanger9:hover{
+            background-image: url("./imagens/visionary\ hover.webp");
+        }
+        #hanger10{
+            background-image: url('./imagens/native\ frente.webp');
+        }
+        #hanger10:hover{
+            background-image: url("./imagens/phenomenom\ hover.webp");
+        }
+        #hanger11{
+            background-image: url('./imagens/coracao\ verde.webp');
+        }
+        #hanger11:hover{
+            background-image: url("./imagens/coracao\ verde\ hover.webp");
+        }
+        #hanger12{
+            background-image: url('./imagens/a\ material\ girl\ hover.webp');
+        }
+        #hanger12:hover{
+            background-image: url("./imagens/a\ material\ girl\ frente.webp");
+        }
+        .best-seller{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FF6200;
+            color: #FFFFFF;
+            border: none;
+            width: 6em;
+            height: 2.5em;
+            text-align: center;
+            z-index: 997;
+        }
+        .quick-view{
+            align-self: flex-end;
+            display:flex;
+            visibility: hidden;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.75);
+            color: #000000;
+            border: none;
+            width: 14.9em;
+            height: 3em;
+            text-align: center;
+        }
+        .quick-view:hover{
+            visibility: visible;
+            cursor: pointer;
+        }
+        .input-footer{
+            height: 2.5em;
+            width: 14em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="left">
+                <div class="store-logo">
+                    <span class="store-name">NOUS</span>       
+                </div>
+                <div class="search" id="search">
+                    <svg width="20" height="20" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><rect id="Icons" x="-640" y="-128" width="1280" height="800" style="fill:none;"/><g id="Icons1" serif:id="Icons"><g id="Strike"></g><g id="H1"></g><g id="H2"></g><g id="H3"></g><g id="list-ul"></g><g id="hamburger-1"></g><g id="hamburger-2"></g><g id="list-ol"></g><g id="list-task"></g><g id="trash"></g><g id="vertical-menu"></g><g id="horizontal-menu"></g><g id="sidebar-2"></g><g id="Pen"></g><g id="Pen1" serif:id="Pen"></g><g id="clock"></g><g id="external-link"></g><g id="hr"></g><g id="info"></g><g id="warning"></g><g id="plus-circle"></g><g id="minus-circle"></g><g id="vue"></g><g id="cog"></g><g id="logo"></g><g id="eye-slash"></g><g id="eye"></g><g id="toggle-off"></g><g id="shredder"></g><path d="M39.94,44.142c-3.387,2.507 7.145,-8.263 4.148,-4.169c0.075,-0.006 -0.064,0.221 -0.53,0.79c0,0 8.004,7.95 11.933,11.996c1.364,1.475 -1.097,4.419 -2.769,2.882c-3.558,-3.452 -11.977,-12.031 -11.99,-12.045l-0.792,0.546Z"/><path d="M28.179,48.162c5.15,-0.05 10.248,-2.183 13.914,-5.806c4.354,-4.303 6.596,-10.669 5.814,-16.747c-1.34,-10.415 -9.902,-17.483 -19.856,-17.483c-7.563,0 -14.913,4.731 -18.137,11.591c-2.468,5.252 -2.473,11.593 0,16.854c3.201,6.812 10.431,11.518 18.008,11.591c0.086,0 0.172,0 0.257,0Zm-0.236,-3.337c-7.691,-0.074 -14.867,-6.022 -16.294,-13.648c-1.006,-5.376 0.893,-11.194 4.849,-15.012c4.618,-4.459 11.877,-5.952 17.913,-3.425c5.4,2.261 9.442,7.511 10.187,13.295c0.638,4.958 -1.141,10.154 -4.637,13.733c-3.067,3.14 -7.368,5.014 -11.803,5.057c-0.072,0 -0.143,0 -0.215,0Z" style="fill-rule:nonzero;"/><g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"></g><g id="react"></g></g></svg>
+                    <input type="text" class="search" name="search" placeholder="Search...">
+                </div>    
+            </div>     
+            <div class="right">    
+                <nav class="menu">
+                    <div class="menu-buttons">
+                        <p>Shop All</p>
+                    </div>
+                    <div class="menu-buttons">
+                        <p>Women</p>
+                    </div>
+                    <div class="menu-buttons">
+                        <p>Men</p>
+                    </div>
+                    <div class="menu-buttons">
+                        <p>Sale</p>
+                    </div>
+                    <div class="menu-buttons">
+                        <p>About</p>
+                    </div>
+                    <div class="menu-buttons">
+                        <p>Contact</p>
+                    </div>
+                    <div class="login">
+                    <svg data-bbox="0 0 50 50" data-type="shape" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50"><g><path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"></path></g></svg>
+                    <span>Log In</span>
+                </nav>
+                <div class="shop-bag">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" viewBox="5.7 0 105.5 126.1" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-1"><path d="M99.8 28.4c0-1.2-0.9-2-2.1-2h-15c0 3.2 0 7.6 0 8.2 0 1.5-1.2 2.6-2.6 2.9 -1.5 0.3-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-0.9 0-4.7 0-8.2H40.1c0 3.2 0 7.3 0 8.2 0 1.5-1.2 2.9-2.6 2.9 -1.5 0-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-0.6 0-5 0-8.2h-15c-1.2 0-2 0.9-2 2L8.3 124c0 1.2 0.9 2.1 2.1 2.1h96.3c1.2 0 2.1-0.9 2.1-2.1L99.8 28.4z"></path><path d="M59.1 5.9c-2.9 0-2 0-2.9 0 -2 0-4.4 0.6-6.4 1.5 -3.2 1.5-5.9 4.1-7.6 7.3 -0.9 1.8-1.5 3.5-1.8 5.6 0 0.9-0.3 1.5-0.3 2.3 0 1.2 0 2.1 0 3.2 0 1.5-1.2 2.9-2.6 2.9 -1.5 0-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-1.2 0-2.3 0-3.5 0-3.2 0.9-6.4 2-9.4 1.2-2.3 2.6-4.7 4.7-6.4 3.2-2.9 6.7-5 11.1-5.9C53.5 0.3 55 0 56.7 0c1.5 0 2.9 0 4.4 0 2.9 0 5.6 0.6 7.9 1.8 2.6 1.2 5 2.6 6.7 4.4 3.2 3.2 5.3 6.7 6.4 11.1 0.3 1.5 0.6 3.2 0.6 4.7 0 1.2 0 2.3 0 3.2 0 1.5-1.2 2.6-2.6 2.9s-2.9-0.9-3.2-2.3c0-0.3 0-0.3 0-0.6 0-1.2 0-2.6 0-3.8 0-2.3-0.6-4.4-1.8-6.4 -1.5-3.2-4.1-5.9-7.3-7.3 -1.8-0.9-3.5-1.8-5.9-1.8C61.1 5.9 59.1 5.9 59.1 5.9L59.1 5.9z"></path><text x="58.5" y="77" dy=".35em" text-anchor="middle" class="_2u__n" data-hook="items-count">0</text></svg>
+                </div>
+            </div>
+        </header>
+        <div class="box" id="box1">
+            <div class="boxtext">
+                <span class="font1">FREE SHIPPING</span>
+                <span class="font2">ON ORDERS OVER $50 - USE COUNPON CODE OVER50</span>
+            </div>
+            <div class="buttons">
+                <div class="button">
+                    <p>Shop Women</p>
+                </div>
+                <div class="button">
+                    <p>Shop Men</p>
+                </div>
+                <div class="button">
+                    <p>Shop Sale</p>
+                </div>
+            </div>
+        </div>
+        <div class>
+            <img class="photos" src="https://static.wixstatic.com/media/ea71bb_ed3d94dce4424884bb453b4045cf66af~mv2_d_1784_1946_s_2.jpg/v1/fill/w_325,h_517,al_c,q_80,usm_0.66_1.00_0.01/ea71bb_ed3d94dce4424884bb453b4045cf66af~mv2_d_1784_1946_s_2.webp" alt="">
+            <img class="photos"src="https://static.wixstatic.com/media/ea71bb_6982021bfe72428891e04e103b8e2b4a~mv2_d_2001_2211_s_2.jpg/v1/fill/w_326,h_517,al_c,q_80,usm_0.66_1.00_0.01/ea71bb_6982021bfe72428891e04e103b8e2b4a~mv2_d_2001_2211_s_2.webp" alt="">
+            <img class="photos"src="https://static.wixstatic.com/media/ea71bb_9c6c6c058cbc4e4da9eb1876b4c798c6~mv2_d_5122_3415_s_4_2.jpg/v1/fill/w_512,h_517,al_c,q_80,usm_0.66_1.00_0.01/ea71bb_9c6c6c058cbc4e4da9eb1876b4c798c6~mv2_d_5122_3415_s_4_2.webp" alt="">
+        </div>
+        <div class="box" id="box2">
+            <div class="ribbon"></div>            
+            <h2 class="font3">NEW ARRIVALS</h2>
+        </div>
+        <section class="box" id="box3">
+            <figure>
+                <div class="hanger" id="hanger1">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 25.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger2">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 26.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger3">
+                    <div class="best-seller">Best Seller</div>
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 28.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger4">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 26.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger5">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 26.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger6">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 32.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger7">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 32.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger8">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 31.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger9">
+                    <div class="best-seller">Best Seller</div>
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 25.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger10">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 31.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger11">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 28.00</figcaption>
+            </figure>
+            <figure>
+                <div class="hanger" id="hanger12">
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <figcaption>I'm a product</figcaption>
+                <figcaption class="font4">$ 28.00</figcaption>
+            </figure>
+        </section>
+        <div class="box" id="box4">
+                <div class="button" id="button1">
+                    <p>Shop All</p>
+                </div>
+                <div id="button2">
+                    <p>></p>
+                </div>
+        </div>
+        <div class="float-button">
+            <p><b>Let's Chat!</b></p>
+        </div>
+        <footer class="box" id="box5">
+            <nav class="box6">
+                <p>Shop All</p>
+                <p>About</p>
+                <p>Contact</p>
+                <p>Stockist</p>
+            </nav> 
+            <nav class="box6">
+                <p>FAQ</p>
+                <p>Shipping & Returns</p>
+                <p>Store Policy</p>
+                <p>Payments Methods<p>    
+            </nav> 
+            <nav class="box6">        
+                <p>Instagram</p>
+                <p>Pinterest</p>
+                <p>Facebook</p>
+                <p>Twitter</p>
+            </nav>
+            <div class="box6">   
+                <p>Join our mailing list</p>
+                <p>and get 10% off</p>
+                <input class="input-footer" type="text" placeholder="Enter your email here*">
+                <div id="button3">
+                    <p>Subscribe Now</p>
+                </div>
+            </div>    
+        </footer>
+    </div>    
+</body>
+</html>

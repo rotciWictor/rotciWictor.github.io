@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <h1>Corrida Padrão</h1>
+    <input type="button" onclick=startStandardRace(quickRace) value="Corrida rápida">
+    <input type="button" onclick=startStandardRace(grandPrix) value="Grande Prêmio">
+    <input type="button" onclick=startStandardRace(enduro) value="Enduro">
+    <h1 id="winner"></h1>
+    <h2 id="winnerlaps"></h2>
+    
+    <h1>Corrida Personalizada</h1>
+    <label>
+        <input type="number" min=1 step=1 name="" id="customLaps" placeholder="Insira o número de voltas da corrida">
+    </label>
+    <input type="button" onclick=startCustomRace() value="Corrida rápida">
+    <input type="button" onclick=startCustomRace(grandPrix) value="Grande Prêmio">
+    <input type="button" onclick=startCustomRace(enduro) value="Enduro">
+    <h1 id="customwinner"></h1>
+    <h2 id="custom-laps"></h2>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

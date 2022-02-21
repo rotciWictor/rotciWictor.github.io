@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Biblioteca</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                Cadastro de livros
+            </h1>
+        </header>
+        
+        <form id="registration" method="get" action="#">
+                <input type="text" id="code" class="input-form" placeholder="Código" />
+                <input type="text" id="title" class="input-form" placeholder="Título"/>
+                <input type="text" id="genre" class="input-form" placeholder="Gênero"/>
+                <input type="text" id="year" class="input-form" placeholder="Ano"/>
+                <input type="text" id="publisher" class="input-form" placeholder="Editora"/>
+                <input type="text" id="author" class="input-form" placeholder="Autor(a)"/>
+                <br/>
+                <input type="button" id="btn-send" class="input-form" value="Adicionar ao Acervo" onclick="addBook()" />
+        </form">
+        <section id="#library-collection">
+            <h3>
+                Acervo Biblioteca
+            </h3>
+            <table>
+                <thead>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Gênero</th>
+                <th>Ano</th>
+                <th>Editora</th>
+                <th>Autor(a)</th>
+                </thead>
+                <tbody id="table-body">
+        </section>   
+            </tbody>
+        </table>
+    </main>
+      <script src="./assets/script.js"></script>
+</body>
+</html>

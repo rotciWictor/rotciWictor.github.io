@@ -1,0 +1,29 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+	<title>Novo Projeto</title>
+	<defs>
+		<image  width="250" height="250" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQMAAACyIsh+AAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAB5JREFUeJztwQEBAAAAgiD/r25IQAEAAAAAAAAAvwYgOgABKjm1wgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+		.shp1 { fill: #ffff00 } 
+		.shp2 { fill: #ff00ff } 
+		.shp3 { fill: #0000ff } 
+		.shp4 { fill: #ff0000 } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<path id="Forma 1" class="shp0" d="M33 37L71 37L71 215L33 215L33 37Z" />
+	<path id="Forma 2" class="shp0" d="M38 39L239 39L239 78L38 78L38 39Z" />
+	<path id="Forma 3" class="shp0" d="M210 48L240 48L240 221L210 221L210 48Z" />
+	<path id="Forma 4" class="shp0" d="M50 194L224 194L224 223L50 223L50 194Z" />
+	<path id="Forma 5" class="shp1" d="M7 11L13 11L13 196L7 196L7 11Z" />
+	<path id="Forma 6" class="shp1" d="M95 13L104 13L104 218L95 218L95 13Z" />
+	<path id="Forma 7" class="shp2" d="M46 44L86 44L86 85L46 85L46 44Z" />
+	<path id="Forma 8" class="shp3" d="M154 35L190 35L190 218L154 218L154 35Z" />
+	<path id="Forma 9" class="shp4" d="M52.5 230C40.06 230 30 213.01 30 192C30 170.99 40.06 154 52.5 154C64.94 154 75 170.99 75 192C75 213.01 64.94 230 52.5 230Z" />
+	<path id="Forma 10" class="shp4" d="M123.25 30.89L126.75 27.33L239.75 138.33L236.25 141.89L123.25 30.89Z" />
+	<path id="Forma 11" class="shp4" d="M221.77 58.98L226.23 61.23L162.23 188.23L157.77 185.98L221.77 58.98Z" />
+	<path id="Forma 12" class="shp4" d="M49.97 46.58L54.03 43.64L151.03 177.64L146.97 180.58L49.97 46.58Z" />
+	<path id="Forma 13" class="shp4" d="M250 0L138.1 26.23L78.58 -72.08L153.69 -159.08L259.63 -114.53L250 0Z" />
+	<path id="Forma 14" class="shp4" d="M444 149L279.8 175.01L204.32 26.88L321.88 -90.68L470.01 -15.2L444 149Z" />
+</svg>

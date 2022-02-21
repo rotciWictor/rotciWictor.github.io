@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Calculadora de juros</h1>
+        <form>
+            <label for="client-name">Nome do cliente</label>
+            <input id="client-name" type="text" name="client-name" placeholder="Nome do cliente" />
+            <label for="due-date">Data de vencimento</label>
+            <input id="due-date" type="date" name="due-date" placeholder="Data do Vencimento" />
+            <label for="purchase-amount">Valor da compra</label>
+            <input id="purchase-amount" type="number" name="purchase-amount" placeholder="Valor da Compra"/>
+        </form>
+        <form id="buttons">
+            <input type="button" onclick="insertData()" value="Inserir dados" />
+            <input type="button" onclick="actualValueCalc()" value="Calcular juros" />
+        </form>
+        <h2 id="today"></h2>
+        <table>
+            <thead>
+                <th>Nome do Cliente</th>
+                <th>Data de vencimento</th>
+                <th>Valor da compra</th>
+                <th>Valor Atualizado</th>
+            </thead>
+            <tbody id="table"></tbody>
+        </table>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

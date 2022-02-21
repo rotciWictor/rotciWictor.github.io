@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+         @font-face {
+            font-family: 'Halloween';
+            src: url("fontes/Halloween\ Dreams\ Script.ttf") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+         }
+        
+        body{
+            background-color: purple;
+
+        }
+        
+        h1{
+            text-align: center;
+            font-size: xx-large;
+            font-family: "Halloween";
+            font-weight: bolder;
+            color: seashell;
+        }
+        
+        .conteiner{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:space-between;
+        
+            
+        }
+        .conteiner2{
+           display: flex;
+           flex-direction: column;
+           justify-content:space-between;
+           align-content: center;
+
+        }
+        .conteiner3{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+        }
+        .Gconteiner{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .box{
+            display: flex;
+            background-color: navy;
+            height: 400px;
+            width: 400px;
+            border: black solid 1px;
+            border-radius: 2em 2em;
+            box-shadow: inset 0 0 2em black;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2{
+            display: flex;
+            background-color: goldenrod;
+            height: 300px;
+            width: 300px;
+            border: black dotted 1px;
+            box-shadow: inset 0 0 0.5em black;
+            justify-content: center;
+            align-items: center;
+        }
+        .box3{
+            display: flex;
+            background-color: goldenrod;
+            height: 300px;
+            width: 300px;
+            border: black dashed 1px;
+            box-shadow: inset 0 0 0.5em black;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .box4{
+            display: flex;
+            background-color: navy;
+            height: 200px;
+            width: 200px;
+            border: black solid 1px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 2em black, 0 0 5em black;
+            justify-content: center;
+            align-items: center;
+        }
+        .box5{
+            display: flex;
+            background-color: navy;
+            height: 400px;
+            width: 1200px;
+            border: black solid 1px;
+            border-radius: 2em 2em;
+            box-shadow: inset 0 0 2em black;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            margin: black 1px;
+        }
+    </style>
+</head>
+<body>
+    <H1>HAPPY HALLOWEEN!!</H1>
+    
+    <div class="conteiner">
+        <div class="box4">
+            <img src="https://images.vexels.com/media/users/3/190047/isolated/lists/9cf57c464c717ef9ca815556d4f8cf0a-zombie-standing-silhouette-zombie.png" alt="">
+        </div>
+       
+        <div class="box">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/angry-pumpkin-2380533-1994892.png" alt="abobora">
+        </div>
+        <div class="box4">
+            <img src="https://images.vexels.com/media/users/3/156105/isolated/lists/13183a559ad62ed7b6101349087e474d-halloween-bruxa-silhueta-dia-das-bruxas.png" alt="">
+        </div>
+    </div>
+    <div class="Gconteiner">
+    <div class="conteiner2">
+        <div class="box3">
+            <img src="https://cdn-icons-png.flaticon.com/128/60/60050.png" alt="">
+        </div>
+        <div class="box2">
+            <img src="https://images.vexels.com/media/users/3/228662/isolated/lists/bc9d837756447d363c5ca6cd802c66fc-monkey-dance-skeleton-silhouette.png" alt="">
+        </div>
+        <div class="box3">
+            <img src="https://cdn-icons-png.flaticon.com/128/60/60050.png" alt="">
+        </div>
+        <div class="box2">
+            <img src="https://images.vexels.com/media/users/3/228480/isolated/lists/ad389bf60187670b2255f52955e38277-ballerina-skeleton-silhouette.png" alt="">
+        </div>
+        <div class="box3">
+            <img src="https://cdn-icons-png.flaticon.com/128/60/60050.png" alt="">
+        </div>
+        <div class="box2">
+            <img src="https://images.vexels.com/media/users/3/228523/isolated/lists/c5dd17919184190216eed5a78f606d0d-dancing-skeleton-silhouette.png" alt="">
+        </div>
+        <div class="box3">
+            <img src="https://cdn-icons-png.flaticon.com/128/60/60050.png" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="Gcontainer">
+    <div class="conteiner3">
+        <div class="box5">
+            <img src="https://i.pinimg.com/originals/81/03/fc/8103fc869b8f81bb800663039ede48df.png" alt="">
+            <img src="https://www.freeiconspng.com/uploads/halloween-tree-png-16.png" alt="">
+            <img src="https://i.pinimg.com/originals/6e/e4/f0/6ee4f0442b9f21ba5a394da4a9e906c4.png" alt="">
+        </div>
+    </div>
+    </div>
+</body>
+</html>

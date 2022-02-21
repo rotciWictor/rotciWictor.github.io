@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>Insira 4 números</h2>
+        <div id="inputs">
+            <input type="number" step=1 id="number1">
+            <input type="number" step=1 id="number2">
+            <input type="number" step=1 id="number3">
+            <input type="number" step=1 id="number4">
+        </div>
+        <div class="buttons">
+            <input type="button" onclick="getNumbersToArray()" id="" value="Input">
+        </div>
+        <h2>Display</h2>
+        <div id="display">
+            <h3 id="display1"></h3>
+            <h3 id="display2"></h3>
+            <h3 id="display3"></h3>
+            <h3 id="display4"></h3>
+        </div>
+        <div class="buttons">
+            <input type="button" onclick=backwards() id="" value="Ao contrario">
+            <input type="button" onclick=crescent() id="" value="Crescente">
+        </div>
+        <div></div>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

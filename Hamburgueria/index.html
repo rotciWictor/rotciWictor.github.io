@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Podrão</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+    <h1>Seu Podrão</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Opções de Pão</legend>
+                        <label>
+                            <input type="radio" name="bread" id="french" value="Francês">Francês (R$3,00) 
+                        </label>
+                        <label>
+                            <input type="radio" name="bread" id="australian" value="Australiano">Australiano (R$8,00)
+                        </label>
+                        <label>
+                            <input type="radio" name="bread" id="brioche" value="Brioche">Brioche (R$6,00)
+                        </label>
+            </select>
+            </fieldset>
+            <fieldset>
+                <legend>Opções de Hamburguer</legend>
+                        <label>
+                            <input type="radio" name="hamburguer" id="picanha" value="Picanha">Picanha (R$13,00)
+                        </label>
+                        <label>
+                            <input type="radio" name="hamburguer" id="ribbs" value="Costela">Costela (R$10,00)
+                        </label>
+                        <label>
+                            <input type="radio" name="hamburguer" id="vegan" value="Vegano">Vegano (R$12,00)
+                        </label>
+            </fieldset>
+            <fieldset>
+                <legend>Opções de Salada</legend>
+                    <label>
+                        <input type="radio" name="salad" id="lettuce" value="Alface">Alface (R$1,50)  
+                    </label>
+                    <label>
+                        <input type="radio" name="salad" id="tomato" value="Tomate">Tomate (R$1,50)
+                    </label>
+                    <label>
+                        <input type="radio" name="salad" id="no-salad" value="Sem Salada">Sem salada (R$0,00)
+                    </label>
+            </fieldset>
+            <fieldset>
+                <legend>Opções de Queijo</legend>
+                <label>
+                    <input type="radio" name="cheese" id="muzzarela" value="Muçarela">Muçarela (R$3,00)  
+                </label>
+                <label>
+                    <input type="radio" name="cheese" id="plate" value="Prato">Prato (R$3,00)
+                </label>
+                <label>
+                    <input type="radio" name="cheese" id="cheddar" value="Cheddar">Cheddar (R$5,00)
+                </label>
+            </fieldset>
+
+            <input type="button" id="b" onclick=showOrder() value="Fazer Pedido">
+        </form>
+        <div>
+            <h2 id="pao"></h2>
+            <h2 id="hamburguer"></h2>
+            <h2 id="salad"></h2>
+            <h2 id="cheese"></h2>
+            <h2 id="total"></h2>
+        </div>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

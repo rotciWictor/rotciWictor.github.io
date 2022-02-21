@@ -1,0 +1,98 @@
+body{
+    margin:0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+#band-photo{
+    width: 100%;
+}
+#band-logo{
+    position: absolute;
+    z-index: 1;
+    top: 27em;
+}
+#personal-data{
+    background-color: #0d0d0d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    color: #a6121f;
+    height: 50vh;
+    width: 80vh;
+    border-radius: 2em;
+    border: honeydew 2px solid;
+}
+#name{
+    color: #f21313;
+}
+#infos{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+#my-photo{
+    height: 30vh;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 2em;
+}
+#band-data{
+    background-image:url(/assets/images/maroon5-2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+#albuns{
+    display: flex;
+    flex-wrap: wrap;
+    width: 33vh;
+    justify-content: center;
+    list-style: none;
+}
+#discografy,#favorites-playlist, #about{
+    border-radius: 2em;
+    background-color: rgba(124, 123, 123,0.80);
+    height: 80vh;
+    width: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+#discografy{
+    padding-right: 2em;
+}
+#discografy>h3{
+    padding-left: 2em;
+}
+#about{
+    width: 40vh;
+}
+#about>p{
+    text-align: center;
+}
+#musics{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: upper-roman;
+}

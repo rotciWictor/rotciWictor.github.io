@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <h1>Jogo da Velha</h1>
+    <main>
+        <div id="board">
+            <div class="square" onclick="setPlay('one',0,0)" id="sOne">
+                <h2 class="element" id="one"></h2>
+            </div>
+            <div class="square" onclick="setPlay('two',0,1)" id="sTwo">
+                <h2 class="element" id="two"></h2>
+            </div>
+            <div class="square" onclick="setPlay('three',0,2)" id="sThree">
+                <h2 class="element" id="three"></h2>
+            </div>
+            <div class="square" onclick="setPlay('four',1,0)" id="sFour">
+                <h2 class="element" id="four"></h2>
+            </div>
+            <div class="square" onclick="setPlay('five',1,1)" id="sFive">
+                <h2 class="element" id="five"></h2>
+            </div>
+            <div class="square" onclick="setPlay('six',1,2)" id="sSix">
+                <h2 class="element" id="six"></h2>
+            </div>
+            <div class="square" onclick="setPlay('seven',2,0)" id="sSeven">
+                <h2 class="element" id="seven"></h2>
+            </div>
+            <div class="square" onclick="setPlay('eight',2,1)" id="sEight">
+                <h2 class="element" id="eight"></h2>
+            </div>
+            <div class="square" onclick="setPlay('nine',2,2)" id="sNive">
+                <h2 class="element" id="nine"></h2>
+            </div>
+        </div>
+    </main>
+    <h3 id="winner"></h3>
+    <input type="button" onclick=clean() value="Reiniciar">
+    <script src="./assets/script2.js"></script>
+</body>
+
+</html>

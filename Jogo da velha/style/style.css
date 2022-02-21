@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255,255,255,0.25)0em, transparent 1em);
+    background-color: #0d0d0d;
+    background-size: 1.2em 1.2em;
+}
+h1,h3{
+    color: white;
+}
+input{
+    background-color:#0d0d0d ;
+    color: white;
+    font-weight: bold;
+    height: 2.5em;
+    width: 8em;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#0d0d0d;
+    width: 28em;
+    height: 28em;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: blanchedalmond 1px solid;
+    width: 8em;
+    height: 8em;
+    cursor: pointer;
+
+}
+
+.square>h2 {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.square:hover {
+    background-color: rgba(158, 157, 157, 0.2);
+}
+
+.square>h2:hover {
+    color: rgba(240, 10, 10, 0.719);
+}

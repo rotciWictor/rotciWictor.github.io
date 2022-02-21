@@ -1,0 +1,42 @@
+.header img{
+S
+}
+body{
+
+    font-family: Arial, 'Times New Roman', Times, serif;
+    background: black url(imagens/oscar-icon.png) center round fixed;
+    margin: 1.6em 250px; 
+}
+h1 {
+    color: blue;
+    background-color: mediumseagreen;
+    border-top-style: dashed;
+    border-bottom-style: dotted;
+    border-color: mediumaquamarine;
+    text-align: center;;
+}
+h2 {
+    color: yellow;
+    -webkit-text-stroke: 1px blue;
+    
+}   
+h3{
+    color: black;font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke: 1px wheat;
+}
+p{
+    color: tomato;font-style: italic;
+    background-color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+.trailer{
+    align-self: center;
+    border: red 20px;
+
+}
+
+div{
+    text-align: center;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        @font-face { font-family: "Kelly Slab"; 
+        src: local("Kelly Slab"), local("KellySlab-Regular"), url("https://fonts.gstatic.com/s/kellyslab/v10/-W_7XJX0Rz3cxUnJC5t6fkQLfr8nfiI.woff2") format("woff2"); 
+        font-style: normal; 
+        font-weight: 400; 
+        font-display: block; 
+        unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; 
+        }
+        @font-face { font-family: "Open Sans";
+         src: url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-regular-webfont.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-regular-webfont.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/user-site-fonts/fonts/open-source/opensans-regular-webfont.svg#open_sansregular") format("svg");
+          font-style: normal; font-weight: 400; font-display: block; 
+        }
+        body{
+            margin: 0;
+        }
+        header{
+            display: flex;
+            justify-content:center;
+            position: absolute;
+            background-color: rgba(0,0,0,8);
+            width: 1349px;
+            height: 169px;
+            z-index: 1;
+        }
+        .main-img{
+            width: 1349px;
+            height: 627px;
+            margin: 0px;
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 169px;
+            margin-top: 50px;
+            box-shadow:rgba(0,0,0,.6);
+            background-color: black;
+        }
+        .font-logo{
+            font-family: Kelly Slab ;
+            color: #DDC000;
+            font-size: 50px;
+            text-align: center;
+            border-top: #DDC000 solid 2px ;
+            padding-bottom: 4px;
+            border-bottom: #DDC000 solid 2px;
+            width: 80%;
+            margin-top:22px;
+        }
+        .font-logo2{
+            font-family: Kelly Slab ;
+            color: #DDC000;
+            font-size: 22px;
+            text-align: center;
+            width: 55%;
+            margin-top:-63px;
+            background-color: black;
+        }
+        .font-logo3{
+            font-family: Kelly Slab;
+            color: #DDC000;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            margin:0;
+            margin-top:-20px;
+            letter-spacing: 13.5px;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-evenly;
+            align-self: flex-end;
+            width: 770px;
+            margin: -10px;
+          
+        }
+        .font-menu{
+            font-family: Kelly Slab;
+            color: white;
+            font-size: 17px;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        #inicio,.font-menu:hover{
+            color: #DDC000;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 1349px;
+            height: 410px;
+            margin-top: -5px;
+            background-color: rgba(0,0,0,8);
+        }
+        .blank-space{
+            border-bottom: grey solid 2px;
+            width: 80%;
+            height: 22%;
+            margin: 0ex;
+        }
+        .a{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+
+        }
+        .articles{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .font-articles{
+            font-family: Kelly Slab;
+            color: white;
+            font-size: 16px;
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: normal;
+            width: 237px;
+        }
+        .font-articles2{
+            font-family: "Open Sans";
+            color: white;
+            font-size: 13px;
+            text-align: left;
+            max-width: 232px;
+        }
+        .leiamais{
+            font-family:"Open Sans";
+            color: #DDC000;
+            font-size: 13px;
+            text-align: left;
+            margin: 0px;
+            width: 237px;
+            cursor: pointer;
+        }
+        .leiamais:hover{
+            color:grey;
+        }
+        .float-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 56px;
+            width: 248px;
+            background-color: #DDC000;
+            color:black; 
+            font-family: Kelly Slab;
+            font-size: 18px;
+            position: fixed;
+            z-index: 997;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            height: 100px;
+
+        }
+        .credits{
+            display: flex;
+            align-items: flex-start;
+            font-family:"Open Sans";
+            font-size: 12px;
+            color: white;
+            margin-left: 160px;
+        }
+        .social-media{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            margin-right: 190px;
+
+        }
+        .social-media>img{
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+<body>
+    <main>
+        <header>
+            <div class="logo">
+                <p class=font-logo>BELGA</p>
+                <p class="font-logo2">CERVEJARIA</p>
+                <p class="font-logo3">DESDE 1896</p>
+            </div>
+            <nav class="menu">
+                <p class="font-menu" id="inicio" >Início</p>
+                <p class="font-menu">Nossa História</p>
+                <p class="font-menu">Belgas</p>
+                <p class="font-menu">A Cervejaria</p>
+                <p class="font-menu">Eventos</p>
+                <p class="font-menu">CONTATO</p>
+            </nav>
+        </header>
+        <img class="main-img" src="imagens/Belga-Cervejaria/belgas.webp">
+        <section class="about">
+            <div class="blank-space"></div>
+            <div class="a">
+                <div class="articles">
+                    <h3 class=font-articles>Festival da Cerveja</h3>
+                    <img src="/imagens/Belga-Cervejaria/choppeiras.webp" alt="">
+                    <p class="font-articles2">Desfrute de suas cervejas preferidas em nossos estandes em eventos por todo o país.</p>
+                    <p class="leiamais">Leia Mais</p>
+                </div>
+                <div class="articles">
+                    <h3 class=font-articles>Cervejas</h3>
+                    <img src="/imagens/Belga-Cervejaria/colarinho.webp" alt="">
+                    <p class="font-articles2">Independendentemente de qual é a sua cerveja preferida, temos algo que lhe fará feliz!</p>
+                    <p class="leiamais">Leia Mais</p>
+                </div>
+                <div class="articles">
+                    <h3 class=font-articles>Nossa História</h3>
+                    <img src="/imagens/Belga-Cervejaria/irmaos-preto-e-branco.webp" alt="">
+                    <p class="font-articles2">Somos uma cervejaria famíliar, produzindo desde 1896 as melhores cervejas do país.</p>
+                    <p class="leiamais">Leia Mais</p>
+                </div>
+                <div class="articles">
+                    <h3 class=font-articles>A Cervejaria</h3>
+                    <img src="/imagens/Belga-Cervejaria/panela.webp" alt="">
+                    <p class="font-articles2">Visite nossa Cervejaria e aproveite a degustação grátis de cervejas.</p>
+                    <p class="leiamais">Leia Mais</p>
+                </div>
+            </div>
+        </section>
+        <div class="float-button">
+            <p>Vamos conversar por chat!</p>
+        </div>
+        <footer>
+            <div class="credits">
+                <p>© 2023 por BELGA CERVEJARIA Ltd. Orgulhosamente criado com <a>Wix.com</a></p>
+            </div>
+            <div class="social-media">
+                <img src="/imagens/Ponto-pet/wtwitter.png" alt="">
+                <img src="imagens/Ponto-pet/wface.png" alt="">
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
