@@ -1,0 +1,201 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script src="jogoclass.js" defer></script>
+    <title>Batalha épica</title>
+
+</head>
+
+<body>
+    <audio id="theme" loop></audio>
+    <audio id="soundeffect"></audio>
+    <section id="teladeinicio">
+        <h1 id="titulojogo">A Grande Batalha</h1>
+        <button id="start" onclick="start()"><img src="assets/images/botaostart.jpg"></button>
+    </section>
+    <br>
+    <section id="parte1" style="display:none">
+        <h2 id="choose-phrase">Player1 - Escolha seu pokémon: </h2>
+        <div id="listapersonagens">
+            <button class="poke" onclick="escolherpersonagem(1)" id="1"><img id="img1" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(2)" id="2"><img id="img2" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(3)" id="3"><img id="img3" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(4)" id="4"><img id="img4" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(5)" id="5"><img id="img5" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(6)" id="6"><img id="img6" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(7)" id="7"><img id="img7" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(8)" id="8"><img id="img8" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(9)" id="9"><img id="img9" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(10)" id="10"><img id="img10" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(11)" id="11"><img id="img11" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(12)" id="12"><img id="img12" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(13)" id="13"><img id="img13" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(14)" id="14"><img id="img14" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+            <button class="poke" onclick="escolherpersonagem(15)" id="15"><img id="img15" class="imgpoke"
+                    src="assets/images/pokeball.png"></button>
+        </div>
+        <div id="confronto">
+            <div class="atributos" id="atributos-personagem-p1">
+                <h4 id="hp1"></h4>
+                <h4 id="mp1"></h4>
+                <h4 id="st1"></h4>
+                <h4 id="agi1"></h4>
+                <h4 id="int1"></h4>
+                <h4 id="type1"></h4>
+            </div>
+            <div class="personagem" id="p1">
+                <h2 id="nome-personagem-p1"></h2>
+                <img id="escolhap1" src="/assets/images/nada.png">
+                <h3 id="universo-personagem-p1"></h3>
+                <input class="choose-btn" id="btn-alternar" type="image" src="assets/images/ok.png"
+                    onclick="alternarVez()" style="display: none" />
+            </div>
+
+            <img src="assets/images/vs.png">
+
+
+            <div class="personagem" id="p2">
+                <h2 id="nome-personagem-p2"></h2>
+                <img id="escolhap2" src="/assets/images/nada.png">
+                <h3 id="universo-personagem-p2"></h3>
+                <input class="choose-btn" id="btn-finalizarSelecao" type="image" src="assets/images/ok.png"
+                    onclick="finalizarSelecao()" style="display: none" />
+            </div>
+            <div class="atributos" id="atributos-personagem-p2">
+                <h4 id="hp2"></h4>
+                <h4 id="mp2"></h4>
+                <h4 id="st2"></h4>
+                <h4 id="agi2"></h4>
+                <h4 id="int2"></h4>
+                <h4 id="type2"></h4>
+                <h4></h4>
+            </div>
+        </div>
+        <div id="div-btn" style="display: none">
+            <input class="btns-selection" id="btn-fight" type="image" onclick="batalhar()" src="assets/images/fight.png" />
+            <input class="btns-selection" id="btn-oops" type="image" src="assets/images/oops.png" onclick="reselect()">
+    </section>
+
+
+    <div id="parte2" style="display:none">
+        <main>
+            <section id="battle-area">
+                <div class="player" id="player1">
+                    <div class="status-player">
+                        <h2 id="player1-monster-name"></h2>
+                        <div class="hp">
+                            <h3>HP:</h3>
+                            <div class="hp-bar" id="hp-p1"></div>
+                        </div>
+                        <div class="hp-numbers">
+                            <div id="actual-hp-player1"></div>
+                            <div>/</div>
+                            <div id="total-hp-player1"></div>
+                        </div>
+                        <div class="mp">
+                            <h3>MP:</h3>
+                            <div class="mp-bar" id="mp-p1"></div>
+                        </div>
+                        <div class="mp-numbers">
+                            <div id="actual-mp-player1"></div>
+                            <div>/</div>
+                            <div id="total-mp-player1"></div>
+                        </div>
+                        <div class="rage">
+                            <h5>RG:</h5>
+                            <div class="rage-bar" id="rage-p1"></div>
+                        </div>
+                    </div>
+                    <img class="img-player" id="img-player1">
+                    <div class="ground" id="ground-p1">
+
+                    </div>
+                </div>
+                <div class="player" id="player2">
+                    <div class="status-player">
+                        <h2 id="player2-monster-name"></h2>
+                        <div class="hp">
+                            <h3>HP:</h3>
+                            <div class="hp-bar" id="hp-p2"></div>
+                        </div>
+                        <div class="hp-numbers">
+                            <div id="actual-hp-player2"></div>
+                            <div>/</div>
+                            <div id="total-hp-player2"></div>
+                        </div>
+                        <div class="mp">
+                            <h3>MP:</h3>
+                            <div class="mp-bar" id="mp-p2"></div>
+                        </div>
+                        <div class="mp-numbers">
+                            <div id="actual-mp-player2"></div>
+                            <div>/</div>
+                            <div id="total-mp-player2"></div>
+                        </div>
+                        <div class="rage">
+                            <h5>RG:</h5>
+                            <div class="rage-bar" id="rage-p2"></div>
+                        </div>
+                    </div>
+                    <img class="img-player" id="img-player2">
+                    <div class="ground" id="ground-p2"></div>
+                </div>
+            </section>
+            <section id="controls">
+                <div class:="controls" id="controls-p1">
+                    <h3 class="description" id="description-p1"></h3>
+                    <div>
+                        <input class="btn btn-blue" type="button" value="" id="btnFraco1" onclick="lightAttack(1,2)">
+                        <input class="btn btn-green" type="button" value="" id="btnForte1" onclick="heavyAttack(1,2)">
+                        <input class="btn btn-red" type="button" value="" id="btnEspecial1"
+                            onclick="specialAttack(1,2)">
+                        <input class="btn btn-orange" type="button" value="" id="btnOrange1"
+                            onclick="recoilAttack(1,2)">
+                        <input class="btn btn-black" type="button" value="" id="btnBlack1" onclick=attBoost(1)>
+                    </div>
+                </div>
+                <div id="text-box">
+
+                </div>
+                <div class:="controls" id="controls-p2">
+                    <h3 class="description" id="description-p2"></h3>
+                    <div>
+                        <input class="btn btn-blue" type="button" value="" id="btnFraco2" onclick="lightAttack(2,1)">
+                        <input class="btn btn-green" type="button" value="" id="btnForte2" onclick="heavyAttack(2,1)">
+                        <input class="btn btn-red" type="button" value="" id="btnEspecial2"
+                            onclick="specialAttack(2,1)">
+                        <input class="btn btn-orange" type="button" value="" id="btnOrange2"
+                            onclick="recoilAttack(2,1)">
+                        <input class="btn btn-black" type="button" value="" id="btnBlack2" onclick=attBoost(2)>
+                    </div>
+                </div>
+            </section>
+            <audio id="soundeffect2"></audio>
+        </main>
+        <input id="restart" type="image" src="assets/images/start.png" onclick="location.reload()" />
+    </div>
+</body>
+
+</html>
