@@ -1,0 +1,491 @@
+@font-face {
+    font-family: joystick;
+    src: url(./assets/fonts/joystix\ monospace.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: game_over;
+    src: url(./assets/fonts/game_over.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: pokemon-hollow;
+    src: url(./assets/fonts/Pokemon\ Hollow.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: pokemon-solid;
+    src: url(./assets/fonts/Pokemon\ Solid.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#teladeinicio {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/images/telainicio.png);
+    background-size: cover;
+}
+
+.choose-btn{
+    border-radius: 50%;
+    height: 60px;
+    cursor: pointer;
+}
+
+#start {
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    border: none;
+}
+#start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px #00000033;
+}
+
+#start:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px #00000033;
+}
+
+#parte1 {
+    height: 95vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#choose-phrase {
+    margin-top: -1em;
+    font-family: pokemon-solid;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#titulojogo {
+    margin: 0;
+    margin-bottom: 100px;
+    font-family: joystick;
+    font-size: 60px;
+    color: #e21313;
+    text-shadow:
+        -1px -1px 0px #000000de,
+        -1px 1px 0px #000000de,
+        1px -1px 0px #000000de,
+        1px 0px 0px #000000de;
+}
+
+#listapersonagens {
+    width: 90vw;
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1.5em
+}
+
+#escolhap1,
+#escolhap2 {
+    height: 9em;
+    width: 7em;
+}
+#escolhap2 {
+    transform: scaleX(-1);
+}
+
+.poke {
+    height: 105px;
+    width: 70px;
+    background-color: #faeb1fda;
+    border-color: #faeb1fda;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.poke:hover {
+    transform: translateY(-3px);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.imgpoke{
+    height: 105px;
+    width: 70px;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#confronto {
+    height: 20em;
+    width: 70em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: pokemon-solid;
+    font-size: large;
+}
+.personagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    font-size: larger;
+    letter-spacing: 2px;
+}
+.atributos {
+    letter-spacing: 2px;
+    width: 300px;
+}
+
+#players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#campobatalha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+img {
+    height: 120px;
+    width: 80px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #faeb1fda;
+    overflow: hidden;
+}
+
+main {
+    margin-top: -0.5em;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#div-btn {
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-around;
+}
+.btns-selection{
+    height: 70px;
+}
+
+
+#caracter-selection {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+#battle-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 31.5em;
+    width: 80em;
+    overflow: hidden;
+    border: black 2px solid;
+}
+
+.ground {
+    position: absolute;
+    height: 6em;
+    width: 9em;
+    border-radius: 50%;
+    background-color: greenyellow;
+
+}
+
+#ground-p1 {
+    top: 10em;
+    left: 20em;
+}
+
+#ground-p2 {
+    bottom: 9em;
+    right: 20em;
+
+}
+
+.player {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15em;
+    width: 80em;
+}
+
+#player1 {
+    flex-direction: row-reverse;
+}
+
+#player2 {
+    flex-direction: row;
+}
+
+.img-player {
+    margin: 20px;
+    height: 180px;
+    width: auto;
+    position: relative;
+    z-index: 1;
+}
+#img-player2 {
+    transform: scaleX(-1);
+}
+.status-player {
+    background: #FFFFFFAA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10em;
+    width: 18em;
+    border-radius: 1em;
+    position: relative;
+    box-shadow: 12px 5px 20px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+}
+
+.status-player::before {
+    content: "";
+    position: absolute;
+    height: 5000%;
+    width: 5000%;
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.status-player::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #FFFFFFAA;
+    border-radius: 1em;
+}
+
+.status-player * {
+    position: relative;
+    z-index: 10;
+    
+}
+
+.hp,
+.mp,
+.rage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hp-bar,
+.mp-bar {
+    height: 1em;
+    width: 12em;
+    margin: 0 2px;
+    border-radius: 2em;
+    background-color: grey;
+    display: flex;
+}
+
+.rage-bar {
+    height: 0.4em;
+    width: 12em;
+    margin: 0 2px;
+    border-radius: 2em;
+    background-color: grey;
+    display: flex;
+}
+
+#hp-p1,
+#hp-p2 {
+    --hp: 100;
+}
+
+#hp-p1::before,
+#hp-p2::before {
+    content: "";
+    width: calc(var(--hp) * 1%);
+    background-color: hsl(calc(var(--hp) * 1.2), 80%, 50%);
+    transition: all 1s ease;
+    border-radius: 2em;
+}
+
+#mp-p1,
+#mp-p2 {
+    --mp: 100;
+}
+
+#mp-p1::before,
+#mp-p2::before {
+    content: "";
+    width: calc(var(--mp) * 1%);
+    background-color: blue;
+    transition: all 0.5s ease;
+    border-radius: 2em;
+}
+
+#rage-p1,
+#rage-p2 {
+    --rg: 0;
+}
+
+#rage-p1::before,
+#rage-p2::before {
+    content: "";
+    width: calc(var(--rg) * 1%);
+    background-color: hsl(calc(var(--rg) *-1* 0.6 + 60), 80%, 50%);
+    transition: all 1s ease;
+    border-radius: 2em;
+}
+
+.hp-numbers,
+.mp-numbers {
+    display: flex;
+    justify-content: space-evenly;
+    width: 8em;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px #00000033;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px #00000033;
+}
+
+.btn:disabled {
+    background-color: #808080;
+    transform: none;
+    box-shadow: none;
+
+}
+
+.btn {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #2121dfcc;
+}
+
+.btn-green {
+    background-color: #14a514cc;
+}
+
+.btn-red {
+    background-color: #df3131cc;
+}
+
+.btn-orange {
+    background-color: #fcb737cc;
+}
+
+.btn-black {
+    background-color: #000000cc;
+}
+
+#text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black 5px solid;
+    height: 115px;
+    width: 350px;
+    background-color: #ffffdd;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#controls {
+    background-color: #cccccc;
+    width: 80em;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.5em black solid;
+}
+
+.description {
+    text-align: center;
+    font-weight: bold;
+}
+#restart{
+    z-index:-1;
+    position: absolute;
+    bottom: 10em;
+    right: 44.5em;
+
+}
