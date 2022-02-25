@@ -150,8 +150,8 @@
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    font-family: joystick;
-    font-size: medium;
+    font-family: pokemon-solid;
+    font-size: large;
 }
 .personagem {
     display: flex;
