@@ -63,7 +63,7 @@
 
 #parte1 {
     height: 95vh;
-    width: 100vh;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -487,5 +487,60 @@ main {
     position: absolute;
     bottom: 10em;
     right: 44.5em;
-
 }
+#titulojogo2{
+    font-family: joystick;
+    font-size: 36px;
+    color: #e21313;
+    text-shadow:
+        -1px -1px 0px #000000de,
+        -1px 1px 0px #000000de,
+        1px -1px 0px #000000de,
+        1px 0px 0px #000000de;
+}
+#howToPlay{
+    height: 20em;
+    width: 100%;
+}
+
+/* cada botao e sua explicação estao dentro e uma div propria */
+/* e cada, ambas as div com a img do botao e com a explicação */
+/* estão dentro de uma div maior */
+
+/* a estrutura da página segue pra cada botao a mesma estrutura: */
+/*
+<div id="tudo-btn-cor">
+            <div id="img-btn-cor">
+                <img src="">
+            </div>
+            <div id="par-btn-cor">
+                <h2>Nome do Ataque</h2>
+                <p></p>
+            </div>
+    </div>
+*/
+
+.htp{
+    display: flex;
+    flex-direction: row;
+    font-family: joystick;
+    font-size: medium;
+    margin: 30px;
+}
+.htp-h2{
+    font-size: large;
+    font-family: joystick;
+}   
+
+.htpbutton{
+    height: 50px;
+    width: 50px;
+}
+
+
+/* #div-btn-htp{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+} */

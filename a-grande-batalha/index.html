@@ -23,7 +23,6 @@
     </section>
     <br>
     <section id="parte1" style="display:none">
-        <h2 id="choose-phrase">Player1 - Escolha seu pokémon: </h2>
         <div id="listapersonagens">
             <button class="poke" onclick="escolherpersonagem(1)" id="1"><img id="img1" class="imgpoke"
                     src="assets/images/pokeball.png"></button>
@@ -56,6 +55,7 @@
             <button class="poke" onclick="escolherpersonagem(15)" id="15"><img id="img15" class="imgpoke"
                     src="assets/images/pokeball.png"></button>
         </div>
+        <h2 id="choose-phrase">Player1 - Clique nas pokebolas e escolha seu pokémon!</h2>
         <div id="confronto">
             <div class="atributos" id="atributos-personagem-p1">
                 <h4 id="hp1"></h4>
@@ -94,10 +94,60 @@
             </div>
         </div>
         <div id="div-btn" style="display: none">
-            <input class="btns-selection" id="btn-fight" type="image" onclick="batalhar()" src="assets/images/fight.png" />
+            <input class="btns-selection" id="btn-fight" type="image" onclick="howToPlay()" src="assets/images/fight.png" />
             <input class="btns-selection" id="btn-oops" type="image" src="assets/images/oops.png" onclick="reselect()">
     </section>
-
+    <section id="howToPlay" style="display: none">
+        <h1 id="titulojogo2">Como jogar:</h1>
+        <div class="htp" id="tudo-btn-azul">
+            <div id="img-btn-azul">
+                <img class="htpbutton" src="assets/images/botoes/botao-azul.png">
+            </div>
+            <div id="par-btn-azul">
+                <h2 class="htp-h2">Ataque Fraco</h2>
+                <p>Possui baixo dano. 40% do poder de ataque fixos, mais dano sorteado de até 40%.<br /> Ataque com 100% de precisão.</p>
+            </div>
+        </div>
+        <div class="htp" id="tudo-btn-verde">
+            <div id="img-btn-verde">
+                <img class="htpbutton" src="assets/images/botoes/botao-verde.png">
+            </div>
+            <div id="par-btn-verde">
+                <h2 class="htp-h2">Ataque Forte</h2>
+                <p>Possui dano médio. 70% do poder de ataque fixos, mais dano sorteado de até 30%.<br /> Ataque com 65% de precisão.</p>
+            </div>
+        </div>
+        <div class="htp" id="tudo-btn-vermelho">
+            <div id="img-btn-vermelho">
+                <img class="htpbutton" src="assets/images/botoes/botao-vermelho.png">
+            </div>
+            <div id="par-btn-vermelho">
+                <h2 class="htp-h2">Ataque Especial</h2>
+                <p>Possui dano elevado. 100% do poder de ataque fixos, mais dano sorteado de até 50%.<br /> Ataque com 40% de precisão.</p>
+            </div>
+        </div>
+        <div class="htp" id="tudo-btn-amarelo">
+            <div id="img-btn-amarelo">
+                <img class="htpbutton" src="assets/images/botoes/botao-laranja.png">                
+            </div>
+            <div id="par-btn-amarelo">
+                <h2 class="htp-h2">Ataque com Recuo</h2>
+                <p>Possui médio dano. 70% do poder de ataque fixos, mais dano sorteado de até 30%.<br /> Ataque com 100% de precisão. <br />O atacante recebe 5% de sua vida total como dano.</p>
+            </div>
+        </div>
+        <div class="htp" id="tudo-btn-preto">
+            <div id="img-btn-preto">
+                <img class="htpbutton" src="assets/images/botoes/botao-preto.png">
+            </div>
+            <div id="par-btn-preto">
+                <h2 class="htp-h2">Boost de Atributos</h2>
+                <p>Pode ser ativado quando completar a barra de Rage. Realiza um boost nos status, vida e mana do personagem.</p>
+            </div>
+        </div>
+        <div id="div-btn-htp" style="display: flex">
+            <input class="btns-selection" id="btn-fight" type="image" onclick="batalhar()" src="assets/images/fight.png" style="margin: auto;"/>
+        </div>
+    </section>
 
     <div id="parte2" style="display:none">
         <main>

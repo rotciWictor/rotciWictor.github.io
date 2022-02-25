@@ -71,7 +71,7 @@ const soundeffect2 = document.getElementById("soundeffect2");
 const music = document.getElementById("theme")
 const textBox = document.getElementById("text-box")
 music.setAttribute("src", "assets/sounds/y2meta.com - Pokemon Stadium Intro HD (256 kbps) (1).mp3")
-music.volume = 1;
+music.volume = 0.5;
 $("#teladeinicio").mousemove(function () {
   music.play();
 });
@@ -84,7 +84,7 @@ function start() {
   document.getElementById('teladeinicio').style.display = 'none';
   document.getElementById('parte1').style.display = 'flex';
   music.setAttribute("src", "assets/sounds/y2meta.com - Naruto Ultimate Ninja Storm 2 OST - Character Select (256 kbps).mp3")
-  music.volume = 1;
+  music.volume = 0.5;
   music.play();
 
 }
@@ -94,6 +94,7 @@ function start() {
 function batalhar() {
   document.getElementById('teladeinicio').style.display = 'none';
   document.getElementById('parte1').style.display = 'none';
+  document.getElementById('howToPlay').style.display = 'none';
   document.getElementById('parte2').style.display = 'block';
   music.pause()
   music.setAttribute("src", "assets/sounds/y2meta.com - Pokemon Red, Yellow, Blue Battle Music- Trainer (256 kbps).mp3")
@@ -102,6 +103,12 @@ function batalhar() {
   randomBackground()
   definesTurn()
 }
+function howToPlay(){
+  document.getElementById('teladeinicio').style.display = 'none';
+  document.getElementById('parte1').style.display = 'none';
+  document.getElementById('howToPlay').style.display = 'block';
+}
+
 //Define um fundo para a batalha randomicamente
 function randomBackground() {
   const randomNumber = Math.floor(Math.random() * 10)
@@ -189,7 +196,7 @@ function alternarVez() {
   document.getElementById("btn-alternar").disabled = true;
   document.getElementById(`${tag1}`).setAttribute("onclick", "alertar()");
   document.getElementById(`img${tag1}`).className = "imgEscolhida";
-  document.getElementById("choose-phrase").innerHTML = "Player2 - Escolha seu pokémon:"
+  document.getElementById("choose-phrase").innerHTML = `Player2 - Clique nas pokebolas e escolha seu pokémon!`
 }
 
 function finalizarSelecao() {
