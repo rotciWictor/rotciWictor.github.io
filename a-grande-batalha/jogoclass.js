@@ -71,7 +71,7 @@ const soundeffect2 = document.getElementById("soundeffect2");
 const music = document.getElementById("theme")
 const textBox = document.getElementById("text-box")
 music.setAttribute("src", "assets/sounds/y2meta.com - Pokemon Stadium Intro HD (256 kbps) (1).mp3")
-music.volume = 0.5;
+music.volume = 0.4;
 $("#teladeinicio").mousemove(function () {
   music.play();
 });
@@ -84,7 +84,7 @@ function start() {
   document.getElementById('teladeinicio').style.display = 'none';
   document.getElementById('parte1').style.display = 'flex';
   music.setAttribute("src", "assets/sounds/y2meta.com - Naruto Ultimate Ninja Storm 2 OST - Character Select (256 kbps).mp3")
-  music.volume = 0.5;
+  music.volume = 0.3;
   music.play();
 
 }
@@ -98,7 +98,7 @@ function batalhar() {
   document.getElementById('parte2').style.display = 'block';
   music.pause()
   music.setAttribute("src", "assets/sounds/y2meta.com - Pokemon Red, Yellow, Blue Battle Music- Trainer (256 kbps).mp3")
-  music.volume = 0.4;
+  music.volume = 0.2;
   music.play();
   randomBackground()
   definesTurn()
