@@ -151,7 +151,7 @@
     justify-content: space-around;
     text-align: center;
     font-family: joystick;
-    font-size: large;
+    font-size: medium;
 }
 .personagem {
     display: flex;
