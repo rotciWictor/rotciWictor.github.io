@@ -1,24 +1,116 @@
-.time{
-    background-color: #0000ffbe;
-    height: 1em;
-    width: 3em;
-    border: solid black 1px;
-}
-#animated-timer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 #timer{
     font-size: x-large;
 }
-#t10{
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
+#animated-timer{
+    border-radius:2em;
+    height: 1em;
+    width: 12em;
+    border: solid black 1px;
+    --tr: 100;
 }
-#t1{
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
+#animated-timer::before {
+    content: "";
+    width: calc(var(--tr) * 1%);
+    background-color: hsl(calc(var(--tr) * 1.2), 80%, 50%);
+    border-radius: 2em;
+}
+#x {
+    height: 1em;
+    width: 12em;
+    border-radius:2em;
+    border: solid black 1px;
+    position: relative;
+}
+#x::before {
+    content: "";
+    width: 100%;
+    background-color: hsl(120,80%,50%);
+    position: absolute
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #364559;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border: black 1em solid;
+}
+.text{ font-family: lato;
+       font-weight: 100;
+}
+h1{
+    font-family: lato;
+    font-weight: 900;
+    text-shadow: #261e1e;
+    padding-bottom: 1em;
+}
+#card{
+    position: relative;
+    height: 20em;
+    width: 49em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #261e1e;
+    color:#a7bdd9;
+    overflow: hidden;
+   
+}
+
+#card::before {
+    content: "";
+    position: absolute;
+    height: calc(49*1.4*1em);
+    width: 10em;
+    background: linear-gradient(#7188a5,#d7d9d8);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ #card::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #333;
+    border-radius: 2em;
+}
+
+#card * {
+    position: relative;
+    z-index: 10;
+    
+}
+#image{
+    position: absolute;
+    z-index: 9;
+    max-height: 18em;
+    max-width: 46em;
+    height: auto;
+    width: auto;
+}
+#reminder{
+    padding-top: 1em;
 }
